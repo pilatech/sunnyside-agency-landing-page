@@ -6,6 +6,10 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:opsz,wght@9..144,700;9..144,900&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
   
   <title>Frontend Mentor | Sunnyside agency landing page</title>
@@ -17,17 +21,20 @@
     <a href="#" class="nav__logo-link">
      <img src="images/logo.svg" alt="logo" class="logo">
     </a>
-    <ul class="nav__menu">
-     <li class="nav__list"><a href="#" class="nav__link">About</a></li>
-     <li class="nav__list"><a href="#" class="nav__link">Services</a></li>
-     <li class="nav__list"><a href="#" class="nav__link">Projects</a></li>
-     <li class="nav__list"><a href="#" class="nav__link nav__link--btn">Contact</a></li>
-    </ul>
+    <button class="menu-button menu-button--open"><img src="images/icon-hamburger.svg" alt="open menu" class="menu-button__icon"></button>
+    <div class="nav__menu">
+     <ul class="nav__menu-list">
+      <li class="nav__menu-list-item"><a href="#" class="nav__link">About</a></li>
+      <li class="nav__menu-list-item"><a href="#" class="nav__link">Services</a></li>
+      <li class="nav__menu-list-item"><a href="#" class="nav__link">Projects</a></li>
+      <li class="nav__menu-list-item nav__menu-list-item--btn"><a href="#" class="nav__link nav__link--btn">Contact</a></li>
+     </ul>
+    </div>
    </nav>
    <h1 class="title">we are creatives</h1>
    <img src="images/icon-arrow-down.svg" alt="down arrow" class="navigator">
   </header>
-  <div class="transform-section">
+  <div class="section-transform">
    <article class="card">
     <h2 class="card__title">Transform your brand</h2>
     <p class="card__text">
@@ -36,33 +43,33 @@
     </p>
     <a href="#" class="card__link card__link--transform">learn more</a>
    </article>
-   <aside class="hero hero--trasform">
+   <aside class="hero hero--transform">
     <!-- has just background -->
    </aside>
   </div>
-  <div class="standout-section">
+  <div class="section-stand-out">
    <article class="card">
     <h2 class="card__title">Stand out to the right audience</h2>
     <p class="card__text">Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we’ll build and extend your brand in digital places. 
     </p>
-    <a href="#" class="card__link card__link--standout">learn more</a>
+    <a href="#" class="card__link card__link--stand-out">learn more</a>
    </article>
    <aside class="hero hero--stand-out">
     <!-- has just background -->
    </aside>
   </div>
   <div class="section-services">
-   <article class="card card--service card--graphics">
-    <h2 class="card__title card__title--service">
+   <article class="card card--service card--graphic-design">
+    <h2 class="card__title card__title--service card__title--graphic-design">
      Graphic Design
     </h2>
      <p class="card__text card__text--service">
-      Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention.
+     Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients
      </p>
    </article>
    <article class="card card--service card--photography">
-    <h2 class="card__title card__title--service">
-     Graphic Design
+    <h2 class="card__title card__title--service card__title--photography">
+     Photography
     </h2>
      <p class="card__text card__text--service">
       Increase your credibility by getting the most stunning, high-quality photos that improve your business image.
@@ -105,25 +112,32 @@
    </div>
   </section>
   <div class="section-gallery">
-     <picture class="gallery__image">
-       <source media="(min-width: 1100px)" srcset="images/desktop/image-gallery-milkbottles.jpg">
-       <img src="images/mobile/image-gallery-milkbottles.jpg" alt="milk" class="gallery_image">
-     </picture>
-     <picture class="gallery__image">
-      <source media="(min-width: 1100px)" srcset="images/desktop/image-gallery-orange.jpg">
-      <img src="images/mobile/image-gallery-orange.jpg" alt="orange" class="gallery_image">
-     </picture>
-     <picture class="gallery__image">
-      <source media="(min-width: 1100px)" srcset="images/desktop/image-gallery-cone.jpg">
-      <img src="images/mobile/image-gallery-cone.jpg" alt="cone" class="gallery_image">
-    </picture>
-    <picture class="gallery__image">
-     <source media="(min-width: 1100px)" srcset="images/desktop/image-gallery-sugarcubes.jpg">
-     <img src="images/mobile/image-gallery-sugar-cubes.jpg" alt="sugar cubes" class="gallery_image">
-   </picture>
+     <img 
+      src="images/mobile/image-gallery-milkbottles.jpg"
+      srcset="images/mobile/image-gallery-milkbottles.jpg 500w, images/desktop/image-gallery-milkbottles.jpg 1000w"
+      sizes="(min-width: 1100px) 20vw, 100vw"
+      alt="milk" class="gallery_image">
+
+     <img 
+     src="images/mobile/image-gallery-orange.jpg"
+     srcset="images/mobile/image-gallery-orange.jpg 500w, images/desktop/image-gallery-orange.jpg 1000w" 
+     sizes="(min-width: 1100px) 20vw, 100vw"
+     alt="orange" class="gallery_image">
+    
+     <img 
+     src="images/mobile/image-gallery-cone.jpg"
+     srcset="images/mobile/image-gallery-cone.jpg 500w, images/desktop/image-gallery-cone.jpg 1000w"
+     sizes="(min-width: 1100px) 20vw, 100vw" 
+     alt="cone" class="gallery_image">
+
+    <img 
+    src="images/mobile/image-gallery-sugar-cubes.jpg"
+    srcset="images/mobile/image-gallery-sugar-cubes.jpg 500w, images/desktop/image-gallery-sugarcubes.jpg 1000w" 
+    sizes="(min-width: 1100px) 20vw, 100vw"
+    alt="sugar cubes" class="gallery_image">
   </div>
   <footer class="footer">
-   <img src="images/logo.svg" alt="logo" class="footer__logo">
+   <img src="images/logo-footer.svg" alt="logo" class="footer__logo">
    <ul class="footer__menu">
     <li class="footer__menu-item"><a href="#" class="footer__link">About</a></li>
     <li class="footer__menu-item"><a href="#" class="footer__link">Services</a></li>
@@ -132,9 +146,9 @@
    <div class="social__links">
     <a href="#" target="_blank" class="social__link"><img src="images/icon-facebook.svg" alt="facebook" class="social__icon"></a>
     <a href="#" target="_blank" class="social__link"><img src="images/icon-instagram.svg" alt="instagram" class="social__icon"></a>
-   </div>
    <a href="#" target="_blank" class="social__link"><img src="images/icon-twitter.svg" alt="twitter" class="social__icon"></a>
    <a href="#" target="_blank" class="social__link"><img src="images/icon-pinterest.svg" alt="printrest" class="social__icon"></a>
+   </div>
   </footer>
  </main>
   <script src="script.js"></script>
