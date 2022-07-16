@@ -41,11 +41,6 @@ body {
  height: 80vh;
 }
 
-.nav__menu {
- display: none;
- /* will be back */
-}
-
 .nav {
  padding: 3.5rem 2.5rem;
  display: flex;
@@ -64,6 +59,54 @@ body {
  border: none;
  background: transparent;
  cursor: pointer;
+}
+
+.nav__menu {
+ position: absolute;
+ background: var(--color-neutral-white);
+ left: 6.5rem;
+ right: 6.5rem;
+ top: 9rem;
+ text-align: center;
+ padding-top: 8rem;
+ padding-bottom: 5rem;
+ clip-path: polygon(0 3rem, 94% 3rem ,100% 0, 100% 100%, 0 100%);
+ opacity: 0;
+ transition: .5s;
+}
+
+.nav__menu.open {
+ opacity: 1;
+}
+
+
+.nav__menu-list {
+ list-style: none;
+}
+
+.nav__menu-list-item {
+ margin-bottom: 3.5rem;
+}
+
+.nav__menu-list-item--btn {
+ margin-bottom: 0;
+}
+
+.nav__link {
+  color: var(--color-neutral-gray-darker);
+  text-decoration: none;
+ font-size: 2rem;
+}
+
+.nav__link--btn {
+ font-size: 1.6rem;
+ padding: 1.5rem 3rem;
+ border-radius: 5rem;
+ background: var(--color-yellow);
+ font-family: var(--title-font);
+ text-transform: uppercase;
+ font-weight: 900;
+ color: var(--color-neutral-darker)
 }
 
 .title {
